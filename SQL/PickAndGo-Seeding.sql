@@ -17,42 +17,40 @@ INSERT INTO Product (productID, description, basePrice, image)
 INSERT INTO Product (productID, description, basePrice, image)
                         VALUES(3, 'Small Sandwich', 1.00, 'sandwich-small.jpg');
 
-INSERT INTO Ingredient (description, price, categoryID, inStock)
-                        VALUES('Bacon', 2.00, 'Protein', 'Y');
-INSERT INTO Ingredient (description, price, categoryID, inStock)
-                        VALUES('Tomato', 0.50, 'Vegetables', 'Y');
-INSERT INTO Ingredient (description, price, categoryID, inStock)
-                        VALUES('Ranch Dressing', 0.50, 'Sauces', 'Y');
-INSERT INTO Ingredient (description, price, categoryID, inStock)
-                        VALUES('Mayonnaise', 0.25, 'Sauces', 'Y');
-INSERT INTO Ingredient (description, price, categoryID, inStock)
-                        VALUES('BBQ Sauce', 0.50, 'Sauces', 'Y');
-INSERT INTO Ingredient (description, price, categoryID, inStock)
-                        VALUES('Beef', 2.00, 'Protein', 'Y');
-INSERT INTO Ingredient (description, price, categoryID, inStock)
-                        VALUES('Lamb', 2.50, 'Protein', 'Y');
-INSERT INTO Ingredient (description, price, categoryID, inStock)
-                        VALUES('Cucumber', 0.25, 'Vegetables', 'Y');
-INSERT INTO Ingredient (description, price, categoryID, inStock)
-                        VALUES('Red Onion', 0.25, 'Vegetables', 'Y');
-INSERT INTO Ingredient (description, price, categoryID, inStock)
-                        VALUES('Ciabatta Bun', 0.75, 'Breads', 'Y');
-INSERT INTO Ingredient (description, price, categoryID, inStock)
-                        VALUES('Rye Bread', 0.75, 'Breads', 'Y');
-INSERT INTO Ingredient (description, price, categoryID, inStock)
-                        VALUES('Multigrain Bread', 0.75, 'Breads', 'Y');
-INSERT INTO Ingredient (description, price, categoryID, inStock)
-                        VALUES('Cheddar Cheese', 0.50, 'Cheese', 'Y');
-INSERT INTO Ingredient (description, price, categoryID, inStock)
-                        VALUES('Camembert Cheese', 0.75, 'Cheese', 'Y');
-INSERT INTO Ingredient (description, price, categoryID, inStock)
-                        VALUES('Cream Cheese', 0.25, 'Cheese', 'Y');
-INSERT INTO Ingredient (description, price, categoryID, inStock)
-                        VALUES('Lettuce', 0.25, 'Vegetables', 'Y');
-INSERT INTO Ingredient (description, price, categoryID, inStock)
-                        VALUES('Chicken', 2.00, 'Protein', 'Y');
-INSERT INTO Ingredient (description, price, categoryID, inStock)
-                        VALUES('Ciabatta Bun', 0.50, 'Breads', 'Y');
+INSERT INTO Ingredient (description, price, categoryID, inStock, [image])
+                        VALUES('Bacon', 2.00, 'Protein', 'Y', 'https://i.imgur.com/ihZAl5y.png');
+INSERT INTO Ingredient (description, price, categoryID, inStock, [image])
+                        VALUES('Tomato', 0.50, 'Vegetables', 'Y', 'https://i.imgur.com/bAeg35P.png');
+INSERT INTO Ingredient (description, price, categoryID, inStock, [image])
+                        VALUES('Ranch Dressing', 0.50, 'Sauces', 'Y', '');
+INSERT INTO Ingredient (description, price, categoryID, inStock, [image])
+                        VALUES('Mayonnaise', 0.25, 'Sauces', 'Y', 'https://i.imgur.com/WsWUyBh.jpg');
+INSERT INTO Ingredient (description, price, categoryID, inStock, [image])
+                        VALUES('BBQ Sauce', 0.50, 'Sauces', 'Y', 'https://i.imgur.com/TJKliO7.jpg');
+INSERT INTO Ingredient (description, price, categoryID, inStock, [image])
+                        VALUES('Beef', 2.00, 'Protein', 'Y', 'https://i.imgur.com/Idy6ys5.jpg');
+INSERT INTO Ingredient (description, price, categoryID, inStock, [image])
+                        VALUES('Lamb', 2.50, 'Protein', 'Y', 'https://i.imgur.com/QYR2y77.jpg');
+INSERT INTO Ingredient (description, price, categoryID, inStock, [image])
+                        VALUES('Cucumber', 0.25, 'Vegetables', 'Y', 'https://i.imgur.com/raRAtUC.jpg');
+INSERT INTO Ingredient (description, price, categoryID, inStock, [image])
+                        VALUES('Red Onion', 0.25, 'Vegetables', 'Y', 'https://i.imgur.com/3amWtoe.jpg');
+INSERT INTO Ingredient (description, price, categoryID, inStock, [image])
+                        VALUES('Ciabatta Bun', 0.75, 'Breads', 'Y', 'https://i.imgur.com/b2PSEH9.jpg');
+INSERT INTO Ingredient (description, price, categoryID, inStock, [image])
+                        VALUES('Rye Bread', 0.75, 'Breads', 'Y', 'https://i.imgur.com/MhM0vXC.jpg');
+INSERT INTO Ingredient (description, price, categoryID, inStock, [image])
+                        VALUES('Multigrain Bread', 0.75, 'Breads', 'Y', 'https://i.imgur.com/bIeosbC.jpg');
+INSERT INTO Ingredient (description, price, categoryID, inStock, [image])
+                        VALUES('Cheddar Cheese', 0.50, 'Cheese', 'Y', 'https://i.imgur.com/2BzAlyw.jpg');
+INSERT INTO Ingredient (description, price, categoryID, inStock, [image])
+                        VALUES('Camembert Cheese', 0.75, 'Cheese', 'Y', 'https://i.imgur.com/9bzTU2k.jpg');
+INSERT INTO Ingredient (description, price, categoryID, inStock, [image])
+                        VALUES('Cream Cheese', 0.25, 'Cheese', 'Y', 'https://i.imgur.com/p9utl3P.jpg');
+INSERT INTO Ingredient (description, price, categoryID, inStock, [image])
+                        VALUES('Lettuce', 0.25, 'Vegetables', 'Y', 'https://i.imgur.com/104c5GJ.png');
+INSERT INTO Ingredient (description, price, categoryID, inStock, [image])
+                        VALUES('Chicken', 2.00, 'Protein', 'Y', 'https://i.imgur.com/OjbFi4q.jpg');
 
 INSERT INTO OrderHeader (customerID, orderDate, orderValue, pickupTime, orderStatus, currency, paymentType, paymentID, paymentDate)
                          VALUES(2, '2022-11-15', 12.50, '2022-11-15 05:30:00 PM', 'C', 'CAD', 'Paypal', 'MPNU4QQ9N277425VE022403S', '2022-11-15 04:13:00 PM');

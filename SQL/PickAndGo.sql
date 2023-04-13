@@ -1,17 +1,8 @@
 DROP PROC IF EXISTS spUpdateOrderHeaderStatus;
 GO
 
-IF OBJECT_ID('Customer_DietaryType', 'U')    
-	IS NOT NULL DROP TABLE Customer_DietaryType;
-
-IF OBJECT_ID('Ingredient_DietaryType', 'U')    
-	IS NOT NULL DROP TABLE Ingredient_DietaryType;
-
 IF OBJECT_ID('Favorite', 'U')    
 	IS NOT NULL DROP TABLE Favorite;
-
-IF OBJECT_ID('DietaryType', 'U')    
-	IS NOT NULL DROP TABLE DietaryType;
 
 IF OBJECT_ID('LineIngredient', 'U')    
 	IS NOT NULL DROP TABLE LineIngredient;
@@ -59,6 +50,7 @@ CREATE TABLE Ingredient (
 	price DECIMAL(9,2),
 	categoryID VARCHAR(12) NOT NULL,
 	inStock CHAR(1),
+	[image] VARCHAR(255),
 	FOREIGN KEY(categoryID) REFERENCES Category(categoryID));
 
 CREATE TABLE OrderHeader (
@@ -105,25 +97,6 @@ CREATE TABLE Favorite (
 	FOREIGN KEY(customerID) REFERENCES Customer(customerID),
 	FOREIGN KEY(orderID) REFERENCES OrderHeader(orderID),
 	FOREIGN KEY(orderID,lineID) REFERENCES OrderLine(orderID,lineID));
-
-CREATE TABLE DietaryType (
-	dietaryID VARCHAR(2) PRIMARY KEY NOT NULL,
-	dietaryName VARCHAR(30) NOT NULL,
-	dietaryImage VARCHAR(255));
-
-CREATE TABLE Customer_DietaryType (
-	customerID INT NOT NULL,
-	dietaryID VARCHAR(2) NOT NULL,
-	CONSTRAINT PK_Customer_DietaryType PRIMARY KEY (customerID,dietaryID),
-	FOREIGN KEY(customerID) REFERENCES Customer(customerID),
-	FOREIGN KEY(dietaryID) REFERENCES DietaryType(dietaryID));
-
-CREATE TABLE Ingredient_DietaryType (
-	ingredientID INT NOT NULL,
-	dietaryID VARCHAR(2) NOT NULL,
-	CONSTRAINT PK_Ingredient_DietaryType PRIMARY KEY (ingredientID,dietaryID),
-	FOREIGN KEY(ingredientID) REFERENCES Ingredient(ingredientID),
-	FOREIGN KEY(dietaryID) REFERENCES DietaryType(dietaryID));
 
 GO
 
